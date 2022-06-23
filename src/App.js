@@ -11,7 +11,7 @@ function App() {
       <ItemListContainer titulo="HolaMundo" />
       <ItemListContainer titulo="Plaza" />
       <ItemListContainer titulo="Sommier" />
-      <ItemListContainer titulo="King" />
+      <ItemListContainer titulo="Queen" />
     </div>
   );
 }
