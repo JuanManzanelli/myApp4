@@ -1,4 +1,4 @@
-function Hello({name})  {
+/*function Hello({name})  {
     
     return (
         <p>Hello {name}! </p>
@@ -6,4 +6,4 @@ function Hello({name})  {
 
 }
 
-export default Hello;
+export default Hello;*/

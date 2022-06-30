@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Contador(){
+/*function Contador(){
      const [num, setNum] = useState(0);
      
 
@@ -25,4 +25,4 @@ function Contador(){
         </>
     )
 }
-export default Contador;
+export default Contador;*/

@@ -2,7 +2,7 @@ import { useState } from "react";
 import Hello from "./Hello";
 
 
-function Contenedor(){
+/*function Contenedor(){
     const [name, setName ]    = useState('Con Stock')
    return (
       <>
@@ -11,4 +11,4 @@ function Contenedor(){
       </>
   ) 
 }
-export default Contenedor;
+export default Contenedor;*/
