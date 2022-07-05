@@ -1,13 +1,13 @@
 import React from 'react';
 import Item from './Item';
 
-function ItemList ( { Colchon } ) {
+function ItemList ( { colchon } ) {
 
     return (
         <> 
-        { Colchon.map( thisColchon => {
+        { colchon.map( thiscolchon => {
                return(
-               <Item Colchon={thisColchon} key={thisColchon.id} />
+               <Item colchon={thiscolchon} key={thiscolchon.id} />
                )
     })}
         </>  

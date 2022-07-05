@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-/*function Contador(){
+function Contador(){
      const [num, setNum] = useState(0);
      
 
@@ -20,9 +20,9 @@ import { useState } from "react";
     return (
         <>
         <p>{num}</p>
-        <button onClick={suma}>Sumar!</button>
-        <button onClick={resta}>Resta!</button>
+        <button onClick={suma}>+</button>
+        <button onClick={resta}>-</button>
         </>
     )
 }
-export default Contador;*/
+export default Contador;

@@ -1,20 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-import Navbar from './components/Navbar';
-import Body from './components/Body';
+
 import ItemListContainer from './components/ItemListContainer';
-import Contenedor from './components/Contenedor';
-import Contador from './components/Contador';
+import Navbar from './components/Navbar';
+import ItemDetailContainer from './components/ItemDetailContainer';
+
+
 
 
 function App() {
   return (
     
-      <div>
-      <Navbar  />
-      <ItemListContainer titulo="HolaMundo" />
       
+     
+
+      <div className="App">
+        
+        <Navbar  />
+
+        {/*<ItemLisContainer  />*/}
+
+        <ItemDetailContainer  />
+
       </div>
+      
+    
+    
+      
+      
   
   );
 }

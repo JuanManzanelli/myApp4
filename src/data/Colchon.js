@@ -1,4 +1,4 @@
-const Colchon =  [ 
+const colchon =  [ 
 
 {
     "id": 1,
@@ -54,7 +54,8 @@ const Colchon =  [
     "color": "Aquamarine",
     "price": "$28754.98",
     "stock": 31
-  }]
+  },
+];
   
 
-  export default Colchon;
+  export default colchon;
