@@ -1,28 +1,43 @@
 import { useState } from "react";
 
-function Contador(){
-     const [num, setNum] = useState(0);
+
+
+function Contador(props){
+     const [count, setCount] = useState(props.initial);
      
 
-     const suma = ()  => {
-        if(num<10){ 
-        setNum(num + 1);
-        }
-     }
+function handleAdd(){
+    if ( count <props.stock) setCount( count + 1 );
+}
 
-    const resta = ()  => {
-        if(num>0){
-         setNum(num - 1);
-             }  
-        } 
-    
-    
-    return (
-        <>
-        <p>{num}</p>
-        <button onClick={suma}>+</button>
-        <button onClick={resta}>-</button>
-        </>
-    )
+function handleSubstract(){
+    if ( count > 1 ) setCount( count - 1 );
+}
+
+
+   return (
+
+ <div class="container px-5 py-8 mx-auto">
+   <div class="flex flex-col tex-center w-full mb-12">
+        <h1 class="sm:tect-3xl text-2xl front-bold title-front mb">
+              Comprar
+        </h1>
+
+       <div>
+            <div>
+               <button onClick={handleSubstract}>-</button>
+               <span>    {count}    </span>
+               <button onClick={handleAdd}>+</button>   
+            </div>
+          <div>
+               <button>Agregar al carrito</button>
+          </div>
+       </div>
+   </div>
+ </div>
+
+
+
+   )
 }
 export default Contador;

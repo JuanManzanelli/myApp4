@@ -3,13 +3,9 @@ import Contador from "./Contador";
 const ItemDetail = ({ colchon }) => {
 
     return (
-   <div className="card  bg-dark">
-       <img 
-            alt={colchon.title}
-            className="image objetc-contain bg-placeholder h-60 rounded w-full objetc-center mn-6"
-            src={colchon.imgUrl}
-        />
-       <div className="card-body text-light">
+   <div className="card  bg-dark object-center">
+      
+       <div className="card-body text-light object-center">
       <div>
        <h4 className="card-title">{colchon.title}</h4>
        </div>
@@ -34,13 +30,15 @@ const ItemDetail = ({ colchon }) => {
 
         <hr></hr>
        
-        <a href="#!" className="btn btn-outline-secondary rounded-0">
+        {/*<a href="#!" className="btn btn-outline-secondary text-center rounded-0">
             Comprar
-        </a> 
+    </a> */}
         <hr/>
         <br/>
-        
-        <Contador stock={colchon.stock} initial={1} />    
+        <div class=" text-center">
+        <Contador stock={colchon.stock} initial={1} />   
+        </div>
+ 
         
         
      </div>

@@ -1,30 +1,34 @@
 import React, { useEffect, useState } from 'react';
+import colchon from '../data/colchon';
 import colchonZ from '../data/colchon';
 import ItemDetail from './ItemDetail';
 
 
-function getColchon() {
+function getColchon(id) {
     return new Promise( (resolve, reject) => {
         setTimeout( ()  => {
-            resolve(colchonZ);
+            const colchonFound = colchonZ.find( ( colchon)  => {
+                return id === colchon.id
+        })
+        resolve(colchonFound);
         }, 2000); 
     });
 }
 
 
-function ItemListContainer() {
+function ItemListContainer({id}) {
     const [colchon, setColchon] = useState([]);
      
         useEffect( () => {
-          getColchon().then( respuestaPromise => {
-             setColchon(respuestaPromise[0]);
+          getColchon(id).then( respuestaPromise => {
+             setColchon(respuestaPromise);
          });
         }, []);
 
   return (
-    <div className='container px-5 py-8 mx-auto'>
+    <section className='container px-5 py-8 mx-auto'>
         <ItemDetail colchon={colchon}/>  
-    </div>
+    </ section>
     
   )
 }

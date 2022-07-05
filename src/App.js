@@ -18,7 +18,8 @@ function App() {
 
         {/*<ItemLisContainer  />*/}
 
-        <ItemDetailContainer  />
+        <ItemDetailContainer id={4}  />
+        <ItemDetailContainer id={6} />
 
       </div>
       
