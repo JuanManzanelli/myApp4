@@ -1,6 +1,6 @@
 import React from "react";
-import Contador from "./Contador";
-import colchon from "../data/colchon";
+
+import { Link } from "react-router-dom";
 
 function Item( {colchon }) {
 
@@ -14,18 +14,16 @@ function Item( {colchon }) {
        <h4 className="card-title">{colchon.title}</h4>
        <p className="card-text text-secondary text-center">{colchon.color}</p>
        <p className="card-text text-secondary text-center">{colchon.price}</p>
-       <p className="card-text text-secondary text-center">{colchon.stock}</p>
        
-       <a href="#!" className="btn btn-outline-secondary rounded-0">
-            Detalle
-        </a> 
         <hr></hr>
-        <div> 
-          {/*<Contador />*/}
-        </div>
-        <a href="#!" className="btn btn-outline-secondary rounded-0">
-            Comprar
-        </a> 
+        <Link to={`/colchon/${colchon.id}`}>
+         <button className="btn btn-outline-secondary  items-center mt-2 ">
+          Comprar
+         </button>
+        </Link>
+        
+    
+        
         <hr/>
         <br/>
      </div>

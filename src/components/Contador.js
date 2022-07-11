@@ -18,9 +18,9 @@ function handleSubstract(){
    return (
 
  <div class="container px-5 py-8 mx-auto">
-   <div class="flex flex-col tex-center w-full mb-12">
+   <div class="flex flex-col tex-center w-full mb-11">
         <h1 class="sm:tect-3xl text-2xl front-bold title-front mb">
-              Comprar
+              Cantidad
         </h1>
 
        <div>
@@ -30,7 +30,7 @@ function handleSubstract(){
                <button onClick={handleAdd}>+</button>   
             </div>
           <div>
-               <button>Agregar al carrito</button>
+               
           </div>
        </div>
    </div>

@@ -22,17 +22,13 @@ const ItemDetail = ({ colchon }) => {
        <p className="card-text text-secondary text-center">{colchon.stock}</p>
        </div>
 
-       {/*<div> 
-       <a href="#!" className="btn btn-outline-secondary rounded-0">
-            Detalle
-        </a> 
-        </div>*/}
+       
 
         <hr></hr>
        
-        {/*<a href="#!" className="btn btn-outline-secondary text-center rounded-0">
+        {<a href="#!" className="btn btn-outline-secondary text-center rounded-0">
             Comprar
-    </a> */}
+    </a>}
         <hr/>
         <br/>
         <div class=" text-center">
