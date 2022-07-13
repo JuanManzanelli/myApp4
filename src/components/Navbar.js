@@ -3,9 +3,14 @@ import Cartwidget from './CartWidget';
 import  { Link }  from 'react-router-dom';
 
 
-function Navbar() {
-  return (
+import useCartContext from '../store/CartContext';
 
+
+function Navbar(){
+  const {contextFunction} = useCartContext();
+
+  contextFunction();
+  return (
   <header className='navbar'>
   <Link to="/" className='width=120'> 
   <img src='./logo2' alt=''></img>
