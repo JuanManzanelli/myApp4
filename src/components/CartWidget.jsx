@@ -1,9 +1,13 @@
 import React from 'react'
-
+import imgIcono from '../assets/img/carrito-icono.png';
 
 function Cartwidget() {
     return (
-        <div>Carrito</div>
+        <div>
+      
+       <img className='carrNav' src={imgIcono} alt='carritoNav' />
+ 
+    </div>
     )
 }
 

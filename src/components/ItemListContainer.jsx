@@ -17,34 +17,40 @@ function getColchon(categoryid) {
             else { 
             resolve(colchonZ);
             }
-        }, 400); 
+        }, 700); 
     });
 }
 
  
 function ItemListContainer( {titulo} ) {
-    const [colchon, setColchon] = useState([]);
+    console.log("Render ItemListContainer");
+
+    const [colchonEstado, setColchon] = useState([]);
     const { categoryid } = useParams();
-    console.log("ID:" + categoryid);
+    
 
      
         useEffect( () => {
+          console.log("use Effect ItemListContainer");
+
           getColchon(categoryid).then( respuestaPromise => {
              setColchon(respuestaPromise);
          });
         }, [categoryid]);
 
   return (
-    <div className='container px-5 py-8 mx-auto'>
-        <div className='flex flex-col text-center w-fullmb-12'>
-            <div className='col-md-4'>
-              <ItemList colchon={colchon} />
+    <section className='body-font'> 
+    <div className='container px-5 py-12 mx-auto'>
+        <div className='d-flex flex-col text-center w-full mb-12'>
+            <div className='col-md-3'>
+              <ItemList colchon={colchonEstado} />
+              <hr />
             </div>           
             
         </div>   
         
     </div>
-    
+    </section>
   )
 }
 

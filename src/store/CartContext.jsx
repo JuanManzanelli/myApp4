@@ -17,17 +17,40 @@ export function CartContextProvider ({children}) {
      const [cart, setCart] = useState ([]);
      
      const addToCart = (item, cant) => {
-        const newItem = {...item,cant};
-        const newCart= [ ...cart];
-        
-        setCart([...cart, newItem]);
+        if (isInCart()){
+           const  newCart = cart.map(cartItem => {
+                if(cartItem.id === item.id){
+                  const copyItem = {...cartItem};
+                   copyItem.cant += cant;
+                   return copyItem; 
+
+                }
+                else return cartItem; 
+            })
+            setCart(newCart);
+        }
+     else{  
+        const newItem = {...item, cant};
+        setCart([...cart,newItem]);
+        }
+     }
+
+     const removeFromCart= (id) =>{
+        const newCart = [...cart];
+        const cartFilter = newCart.filter( item => {
+            return item.id!== id;
+        })
+        setCart(cartFilter);
      }
       
+    const isInCart =  () =>{
+        return true;
+    } 
     
     const  contextFunction  = () => console.log("Contexto Listo!");
     
     return(
-        <Provider value={ { contextFunction, cart, addToCart } }>
+        <Provider value={ { contextFunction, cart , addToCart, removeFromCart } }>
              {children}
         </Provider>
     )

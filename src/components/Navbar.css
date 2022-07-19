@@ -10,16 +10,16 @@
 }
 
 
-img{
-    width: 250px;
-    height: 100px;
+.logoNav{
+    width: 150px;
+    height: 120px;
     float: left;
-    padding: 2px;
+    padding: 0px;
 }
 
-lista{ 
-    list-style: none;
-    margin-left: 25px 0;
+.carrNav{
+    width: 70px;
+    height: 40px;
     float: left;
-    
+    padding: 0px;
 }

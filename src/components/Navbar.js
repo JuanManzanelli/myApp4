@@ -1,7 +1,7 @@
 import './Navbar.css';
 import Cartwidget from './CartWidget';
 import  { Link }  from 'react-router-dom';
-
+import imgLogo from '../assets/img/logo2.png';
 
 import useCartContext from '../store/CartContext';
 
@@ -12,9 +12,12 @@ function Navbar(){
   contextFunction();
   return (
   <header className='navbar'>
-  <Link to="/" className='width=120'> 
-  <img src='./logo2' alt=''></img>
-  </Link>
+    <div>
+    <Link to="/" >  
+       <img className='logoNav' src={imgLogo} alt='logoNav' />
+    </Link>  
+    </div>
+  
    <Link to="/category/Low">Low</Link>
    <Link to="/category/Medium">Medium</Link>
    <Link to="/category/High">High</Link>

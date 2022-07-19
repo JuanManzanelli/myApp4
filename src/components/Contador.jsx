@@ -27,13 +27,13 @@ function handleSubstract(){
         </h1>
 
        <div>
-            <div>
-               <button onClick={handleSubstract}>-</button>
+            <div class="m:tect-3xl text-5xl front-bold title-front mb" >
+               <button  className="btn btn-outline-secondary text-center" onClick={handleSubstract}>-</button>
                <span>    {count}    </span>
-               <button onClick={handleAdd}>+</button>   
+               <button  className="btn btn-outline-secondary text-center" onClick={handleAdd}>+</button>   
             </div>
           <div>
-            <button onClick={()=>props.onAdd(count)}>Agregar al carrito</button>   
+            <button className="btn btn-outline-secondary text-center rounded-5" onClick={()=>props.onAdd(count)}>Agregar al carrito</button>   
           </div>
        </div>
    </div>

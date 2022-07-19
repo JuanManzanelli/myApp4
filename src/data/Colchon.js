@@ -2,6 +2,7 @@ const colchon =  [
 
 {
     id: 1,
+    imgUrl:"https://picsum.photos/id/900/600",
     title: "King Silver",
     color: "Crimson",
     price: "$14987.06",
@@ -9,6 +10,7 @@ const colchon =  [
     genre: "Low"
   }, {
     id: 2,
+    imgUrl:"https://picsum.photos/id/900/600",
     title: "King Golden",
     color: "Orange",
     price: "$19067.34",
@@ -16,6 +18,7 @@ const colchon =  [
     genre: "Low"
   }, {
     id: 3,
+    imgUrl:"https://picsum.photos/id/900/600",
     title: "Queen Silver",
     color: "Violet",
     price: "$10955.20",
@@ -23,6 +26,7 @@ const colchon =  [
     genre: "Low"
   }, {
     id: 4,
+    imgUrl:"https://picsum.photos/id/900/600",
     title: "King Master Golden",
     color: "Puce",
     price: "$22886.71",
@@ -30,6 +34,7 @@ const colchon =  [
     genre: "Medium"
   }, {
     id: 5,
+    imgUrl:"https://picsum.photos/id/900/600",
     title: "Quenn Golden Plus",
     color: "Maroon",
     price: "$26105.25",
@@ -37,6 +42,7 @@ const colchon =  [
     genre: "Medium"
   }, {
     id: 6,
+    imgUrl:"https://picsum.photos/id/900/600",
     title: "Place Base",
     color: "Teal",
     price: "$11501.03",
@@ -44,6 +50,7 @@ const colchon =  [
     genre:"Medium"
   }, {
     id: 7,
+    imgUrl:"https://picsum.photos/id/900/600",
     title: "Place Eco",
     color: "Yellow",
     price: "$10977.69",
@@ -51,6 +58,7 @@ const colchon =  [
     genre:"High"
   }, {
     id: 8,
+    imgUrl:"https://picsum.photos/id/900/600",
     title: "Place Small",
     color: "Blue",
     price: "$17004.13",
@@ -58,6 +66,7 @@ const colchon =  [
     genre:"High"
   }, {
     id: 9,
+    imgUrl:"https://picsum.photos/id/900/600",
     title: "Place Master",
     color: "Aquamarine",
     price: "$28754.98",
