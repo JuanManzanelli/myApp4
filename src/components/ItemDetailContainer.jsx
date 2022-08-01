@@ -17,7 +17,7 @@ function getColchon(id) {
 
 
 function ItemDetailContainer() {
-    const [colchon, setColchon] = useState([]);
+    const [colchon, setColchon] = useState();
     const {itemid} = useParams();
         
      
