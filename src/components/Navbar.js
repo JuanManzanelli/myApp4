@@ -22,9 +22,11 @@ function Navbar(){
    <Link to="/category/Medium">Medium</Link>
    <Link to="/category/High">High</Link>
 
-    <div>
-     <Cartwidget  />
-    </div>
+    <Link to="/cart"> 
+    <Cartwidget  />
+    </Link>
+     
+ 
 
   </header>
   );

@@ -1,31 +1,70 @@
 import React from 'react'
+import Item from './Item';
 import { Link } from 'react-router-dom';
 import useCartContext from '../store/CartContext';
+import { createBuyOrder } from '../data/fire';
 
-function CartView() {
-  const { cart, removeFromCart,clearCart } = useCartContext();
 
-  if (cart.length === 0) {
-    return <div style={{textAling:"center"}}>
-      <h4>Carrito Vacio</h4>
-      <a href="/">Volver al catalogo</a>
-    </div>
+const CartView = () => {
+  const { cart, removeFromCart,clearCart,getTotalPrice } = useCartContext();
+
+  function handleBuy(){
+
+    const itemsToBuy = cart.map((item) => ( {
+      title: item.title,
+      cant: item.cant,
+      price: item.price,
+      id: item.id, 
+    }
+
+    ))
+      const buyOrder = {
+        buyer:{
+                 name: "Juan",
+                 Phone: "123456789",
+                 email:"coder@house.com",
+        },
+        items:itemsToBuy,
+        total: getTotalPrice (),
   }
-  else{
-    return  <div> 
-    {cart.map(itemCart => {
-        return <div style={{textAling:"center"}} key={itemCart.id}>
-          <br/>
-          <h2>{itemCart.title}</h2>
-          <h2>{itemCart.cant}</h2>
-          <h2>${itemCart.cant * itemCart.price}</h2> 
-          <button onClick={()=> removeFromCart (itemCart.id)} style={{ color:"red"}}>Quitar</button>
-          <hr/><br/>
-    </div>
-    })}
-        <button onClick={clearCart}>Vaciar</button>
-    </div>
+  createBuyOrder(buyOrder);
 
-  }
+  clearCart();
 }
-export default CartView
+  
+  return (   
+     <section>
+      
+      <div>           
+         {cart.length === 0 && (         
+              <p className='alert'>Carrito Vacio</p>                  
+          )}
+
+          {cart && cart.length !== 0 &&(
+
+              <tbody>        
+                  {cart && 
+                  cart.map((item) => (  
+
+                       <div style={{textAling:"center"}}>
+                       <br/>
+                       <h2>{item.title}</h2>
+                       <h2>{item.cant}</h2>
+                       <h2>${item.cant * item.price}</h2> 
+                               
+                        <button onClick={()=> removeFromCart (item.id)} style={{ color:"red"}}>
+                        Quitar
+                        </button>                       
+                       <button onClick={handleBuy}>Comprar</button>                     
+                       <hr/><br/>                
+                  </div>
+                  ))}
+              </tbody>
+          )}
+    </div>
+  </section>
+  
+   );
+   };
+  
+export default CartView;

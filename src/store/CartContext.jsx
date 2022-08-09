@@ -52,14 +52,18 @@ export function CartContextProvider ({children}) {
          return cart.find( itemCart =>itemCart.id === id)
         } 
      
-
+    function getTotalPrice(){
+        let totalPrice = 0;
+        cart.forEach(item =>totalPrice += item.cant * item.price)
+        return totalPrice;
+    }
  
-
+    
 
     const  contextFunction  = () => console.log("Contexto Listo!");
     
     return(
-        <Provider value={ { contextFunction, clearCart, getItemFromCart, cart , addToCart, removeFromCart } }>
+        <Provider value={ { contextFunction, getTotalPrice ,clearCart, getItemFromCart, cart , addToCart, removeFromCart } }>
              {children}
         </Provider>
     )
